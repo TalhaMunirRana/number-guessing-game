@@ -11,15 +11,14 @@ attempts = 0
 
 while True:
     guess = int(input("Your Guess: "))
+    attempts += 1 # Increment 1 in attempts
 
     if guess > number:
         print("Too High!")
-        attempts += 1 # Increment 1 in attempts
+        
     elif guess < number:
         print("Too Low!")
-        attempts += 1 # Increment 1 in attempts
     else:
-        print("Correct")
-        attempts += 1 # Increment 1 in attempts
-        print("Congratulations! You won in " + str(attempts) + " attempts.")
+        print("Congratulations! You guessed the number " + str(number) + ".")
+        print("You won in " + str(attempts) + " attempts.")
         break
