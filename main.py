@@ -2,9 +2,18 @@ import random
 
 print("--- Number Guessing Game ---")
 
-# Generate a Random number
-number = random.randint(1, 10)
-print("I picked a number between 1 and 10")
+# Choose difficulty level
+difficulty = input("Choose difficulty: \n1. Easy (1 -10)\n2. Medium (1 -50)\n3. Hard (1 -100)\n")
+if difficulty == '1':
+    upper_limit = 10
+elif difficulty == '2':
+    upper_limit = 50
+elif difficulty == '3':
+    upper_limit = 100
+
+# Generate the random number
+number = random.randint(1, upper_limit)
+print("I picked a number between 1 and " + str(upper_limit) + ".")
 
 # Attempt counter
 attempts = 0
